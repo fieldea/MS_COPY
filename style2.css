@@ -1,18 +1,30 @@
 .updates {
     padding-top: 48px;
 }
+/* .updates .updates-icon{
+    display: block;
+} */
 .updates .coll a{
     padding: 12px 6px;
     min-height: 44px;
     color: inherit;
     vertical-align: middle;
-    text-align: center;
+    /* width: 100%; */
 }
-.updates .coll img { 
-    /* margin-top: 18px; */
-    /* height: 40px;
-    width: 40px; */
+.highLightString {
+    padding: 3px 14px 5px;
+    height: 100%;
+    letter-spacing: -0.01em;
+    line-height: 1.5em;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-weight: 600;
 }
+/* .updates .coll img { 
+    margin-top: 18px;
+    height: 40px;
+    width: 40px;
+} */
 /* .updates .coll a div{
     font-weight: 600;
     margin: auto;
@@ -29,6 +41,7 @@
 .sells {
     margin-top: 48px;
 }
+
 .promotion picture {
     z-index: 0;
 }
@@ -36,8 +49,7 @@
     width: 88%;
     height: 100%;
     max-width: 2048px;
-    position: absolute;
-    top: 0;
+    position: absolute;    
     bottom: 0;
     left: 0;
     right: 0;
@@ -45,7 +57,6 @@
     margin: 0 auto;
     overflow: hidden;
 }
-
 .promotion .cover .shop-now {
     top: 120px;
     top: calc(50%);
@@ -78,7 +89,8 @@
     max-height: 80px;
     padding: 0;
 }
-.promotion .cover .shop-now div a{
+.emphasisButton{
+    margin-right: 24px;
     margin-top: 12px;
     padding: 8px 20px 8px 20px;
     font-size: 15px;
@@ -97,8 +109,13 @@
     white-space: nowrap;
     transition: all 200ms ease-in-out;
     box-shadow: 0 4px 8px 0 transparent;
+}
+.blackButton {
     color: #fff;
     background: #000;
+}
+.reverseButton {    
+    color: #000;
 }
 .grids .grids-title h2{
     font-size: 24px;
@@ -211,6 +228,9 @@ img{
     height: auto;
     max-width: 100%;
 }
+.slides img, .promotion img {
+    min-height: 270px;
+}
 .top .heading{
     padding-left: 24px;
     padding-top: 18px;
@@ -285,6 +305,24 @@ ul {
 .bottom {
     background-color: #f2f2f2;
 }
+.mycontainer {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.subcontainer {
+    margin-left: calc(5% - 12px);
+    margin-right: calc(5% - 12px);
+}
+@media screen and (min-width: 1080px) {        
+    .mycontainer {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .subcontainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 @media screen and (min-width: 1200px) {        
     #navbarSupportedContent {
         display: none;
@@ -298,25 +336,70 @@ ul {
         min-width:800px
     }   
 }
-@media screen and (min-width: 576px) {    
-    .updates .coll a{
-        display: inline-block;        
+@media screen and (min-width: 576px) {      
+    .fall-slide {
+        left: calc(50% - 260px);
     }    
-    .updates a img{
-        height: 40px;
-        width: 40px;       
-    }  
 }
-@media screen and (max-width: 575px) {   
+/* @media screen and (max-width: 575px) {   
+       
+} */
+.fall-slide {
+    position: absolute;    
+    z-index: 1; 
+    max-width: 520px; 
+    padding: 0 3%;
+}
+.space-keeper {
+    visibility: hidden;
+}
+@media screen and (max-width: 767px) {
     .updates .coll a{
         float: left;        
+        text-align: left; 
+        width: 90%;       
     }   
     .updates a img{
         height: 20px;
         width: 20px;
         margin-right: 8px;
         float: left;        
+    } 
+    .cover {
+        top: 25%;
+    }
+    .fall-slide {
+        top: calc(55%); 
+        text-align: center;
+        vertical-align: middle;
+        padding: 0 3%;
+        font-size: 15px;
+    }     
+    .fall-slide h1 {        
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .updates .coll a{
+        display: inline-block;          
+        text-align: center;      
     }    
+    .updates a img{
+        height: 40px;
+        width: 40px;       
+    } 
+    .cover {
+        top: 0;
+    }  
+    .space-keeper {
+        display: none !important
+    }
+    
+    .fall-slide {
+    top: calc(30%); 
+    left: 0; 
+    padding: 0 3%;
+    }  
 }
 /* @media screen and (min-width: 577px) {    
     .container .updates .updates-icon{
